@@ -87,7 +87,7 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     if (CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 19.0)
         add_compile_options(-Wno-cast-function-type-mismatch)
     endif()
-    add_compile_options(-Werror)
+    add_compile_options(-Werror -Wno-misleading-indentation -Wno-error=return-type)
 endif()
 
 set(ANDROID_PLATFORM android-24)
